@@ -14,9 +14,9 @@ import com.qa.util.TestUtil;
 
 public class TestBase {
 	
-	static WebDriver driver;
-	static Properties prop;
-	static String currentDir;
+	public static WebDriver driver;
+	public static Properties prop;
+	public static String currentDir;
 	
 	public TestBase() {
 		
@@ -24,6 +24,8 @@ public class TestBase {
 			currentDir=System.getProperty("user.dir");
 			prop= new Properties();
 			FileInputStream fis = new FileInputStream(currentDir +"//configuration//config.properties");
+			prop.load(fis);
+			System.out.println("File found");
 		}catch(FileNotFoundException e) {
 			e.printStackTrace();
 		}catch(IOException e) {
@@ -35,9 +37,10 @@ public class TestBase {
 	public static void initialization() {
 		
 		String browser=prop.getProperty("browser");
-		
+		System.out.println(browser);
 		if(browser.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", currentDir + "//Drivers//ChromeDriver.exe");
+			System.setProperty("webdriver.chrome.driver", currentDir + "//Drivers//chromedriver.exe");
+			System.out.println(browser);
 			driver = new ChromeDriver();
 		}else if(browser.equals("chrome")) {
 			System.setProperty("webdriver.gecko.driver", currentDir + "//Drivers//geckodriver.exe");
