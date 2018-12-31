@@ -9,7 +9,6 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import com.qa.util.TestUtil;
 
 public class TestBase {
@@ -17,15 +16,19 @@ public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
 	public static String currentDir;
+	public static String fileSeperator;
+	
 	
 	public TestBase() {
 		
 		try {
+			fileSeperator=System.getProperty("file.seperator");
 			currentDir=System.getProperty("user.dir");
 			prop= new Properties();
 			FileInputStream fis = new FileInputStream(currentDir +"//configuration//config.properties");
 			prop.load(fis);
-			System.out.println("File found");
+		//	System.out.println("File found");
+			
 		}catch(FileNotFoundException e) {
 			e.printStackTrace();
 		}catch(IOException e) {

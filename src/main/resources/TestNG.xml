@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+  
+<suite name="FirstMavenProject Automation Test Suite" thread-count="2" >
+ 
+  <listeners>
+  		<listener class-name="com.qa.testListener.TestListener" />
+  </listeners>
+ 
+  <test name="TestDemo" >
+    <classes>
+       <class name="com.qa.testCases.LoginPageTest" />
+    </classes>
+  </test>
+</suite>
