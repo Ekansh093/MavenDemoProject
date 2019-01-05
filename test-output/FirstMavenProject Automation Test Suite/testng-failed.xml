@@ -10,7 +10,7 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="loginPageTitleTest"/>
+          <include name="verifyIncorrectUserId"/>
         </methods>
       </class> <!-- com.qa.testCases.LoginPageTest -->
     </classes>

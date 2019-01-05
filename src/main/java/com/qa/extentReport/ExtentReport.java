@@ -30,21 +30,24 @@ public class ExtentReport {
 	public static void onSuccess(String info) {
 		
 		logger.log(LogStatus.PASS, info);
+		extent.endTest(logger);
 	}
 	
 	public static void onFailure(String info) {
 			
 		logger.log(LogStatus.FAIL, info);
+		extent.endTest(logger);
 	}
 	
 	public static void onSkip(String info) {
 		
 		logger.log(LogStatus.SKIP, info);
+		extent.endTest(logger);
 	}
 	
 	public static void onFinish() {
 		
-		extent.endTest(logger);
+		
 		extent.flush();
 		extent.close();
 	}

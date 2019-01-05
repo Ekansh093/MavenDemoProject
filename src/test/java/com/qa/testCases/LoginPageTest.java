@@ -27,7 +27,7 @@ public class LoginPageTest extends TestBase{
 	@Test
 	public void loginPageTitleTest() {
 		String title = loginPage.verifyLoginPageTitle();
-		Assert.assertEquals(title, "Guru99 Bank Home Pag","Title does not match");
+		Assert.assertEquals(title, "Guru99 Bank Home Page","Title does not match");
 	}
 	
 	@Test
@@ -36,9 +36,18 @@ public class LoginPageTest extends TestBase{
 		homePage = loginPage.verifyLogin(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	
+	@Test
+	public void verifyIncorrectUserId() {
+		
+		Assert.assertEquals(loginPage.verifyIncorrectUserId("jhfd", "sdjgf"),true);
+		
+	}
+	
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();
 	}
 
 }
+
+

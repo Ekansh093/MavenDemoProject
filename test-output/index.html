@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-FirstMavenProject_Automation_Test_Suite">
-              <span class="suite-name border-failed">FirstMavenProject Automation Test Suite</span>
+              <span class="suite-name border-passed">FirstMavenProject Automation Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-FirstMavenProject_Automation_Test_Suite" class="hide-methods failed suite-FirstMavenProject_Automation_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-FirstMavenProject_Automation_Test_Suite -->
-                      <a href="#" panel-name="suite-FirstMavenProject_Automation_Test_Suite" class="show-methods failed suite-FirstMavenProject_Automation_Test_Suite"> (show)</a> <!-- show-methods failed suite-FirstMavenProject_Automation_Test_Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-FirstMavenProject_Automation_Test_Suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-FirstMavenProject_Automation_Test_Suite" title="com.qa.testCases.LoginPageTest" hash-for-method="loginPageTitleTest">loginPageTitleTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-FirstMavenProject_Automation_Test_Suite -->
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -116,7 +102,17 @@
                     <div class="method-list-content passed suite-FirstMavenProject_Automation_Test_Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FirstMavenProject_Automation_Test_Suite" title="com.qa.testCases.LoginPageTest" hash-for-method="loginPageTitleTest">loginPageTitleTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-FirstMavenProject_Automation_Test_Suite" title="com.qa.testCases.LoginPageTest" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FirstMavenProject_Automation_Test_Suite" title="com.qa.testCases.LoginPageTest" hash-for-method="verifyIncorrectUserId">verifyIncorrectUserId</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-FirstMavenProject_Automation_Test_Suite -->
@@ -131,25 +127,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-FirstMavenProject_Automation_Test_Suite" class="panel FirstMavenProject_Automation_Test_Suite">
-          <div class="suite-FirstMavenProject_Automation_Test_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.qa.testCases.LoginPageTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginPageTitleTest">
-                  </a> <!-- loginPageTitleTest -->
-                  <span class="method-name">loginPageTitleTest</span>
-                  <div class="stack-trace">java.lang.AssertionError: Title does not match expected [Guru99 Bank Home Pag] but found [Guru99 Bank Home Page]
-	at com.qa.testCases.LoginPageTest.loginPageTitleTest(LoginPageTest.java:30)
-... Removed 30 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-FirstMavenProject_Automation_Test_Suite-class-failed -->
           <div class="suite-FirstMavenProject_Automation_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -158,9 +135,23 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="loginPageTitleTest">
+                  </a> <!-- loginPageTitleTest -->
+                  <span class="method-name">loginPageTitleTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="loginTest">
                   </a> <!-- loginTest -->
                   <span class="method-name">loginTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyIncorrectUserId">
+                  </a> <!-- verifyIncorrectUserId -->
+                  <span class="method-name">verifyIncorrectUserId</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -220,20 +211,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'loginTest')
 data.setCell(0, 2, 'com.qa.testCases.LoginPageTest')
-data.setCell(0, 3, 12654);
+data.setCell(0, 3, 20598);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginPageTitleTest')
+data.setCell(1, 1, 'verifyIncorrectUserId')
 data.setCell(1, 2, 'com.qa.testCases.LoginPageTest')
-data.setCell(1, 3, 31);
+data.setCell(1, 3, 1434);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'loginPageTitleTest')
+data.setCell(2, 2, 'com.qa.testCases.LoginPageTest')
+data.setCell(2, 3, 34);
 window.suiteTableData['FirstMavenProject_Automation_Test_Suite']= { tableData: data, tableDiv: 'times-div-FirstMavenProject_Automation_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 22 seconds</span>
               <div id="times-div-FirstMavenProject_Automation_Test_Suite">
               </div> <!-- times-div-FirstMavenProject_Automation_Test_Suite -->
             </div> <!-- times-div -->
@@ -265,26 +260,36 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">loginPageTitleTest</span>
-                <span class="method-start">25513 ms</span>
+                <span class="method-start">43238 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">25554 ms</span>
+                <span class="method-start">43279 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">26226 ms</span>
+                <span class="method-start">49277 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginTest</span>
-                <span class="method-start">58875 ms</span>
+                <span class="method-start">74884 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">71531 ms</span>
+                <span class="method-start">95484 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">96200 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyIncorrectUserId</span>
+                <span class="method-start">119592 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">121029 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
